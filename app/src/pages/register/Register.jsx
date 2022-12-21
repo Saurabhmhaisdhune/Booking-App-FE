@@ -23,7 +23,7 @@ export default function Register() {
   const handleSubmit = () => {
     axios
       .post(
-        "http://localhost:8000/api/auth/register",
+        "https://booking-app-p324.onrender.com/api/auth/register",
         JSON.stringify(userData),
         {
           headers: {
