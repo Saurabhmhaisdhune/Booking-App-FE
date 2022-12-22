@@ -3,7 +3,7 @@ import "./featured.css";
 
 const Featured = () => {
   const { data, loading} = useFetch(
-    "/hotels/countByCity?cities=delhi,bangalore,mumbai"
+    "https://booking-app-p324.onrender.com/api/hotels/countByCity?cities=delhi,bangalore,mumbai"
   );
 
   return (
