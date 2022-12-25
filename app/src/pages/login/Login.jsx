@@ -10,7 +10,7 @@ const Login = () => {
     password: undefined,
   });
 
-  const { loading, dispatch } = useContext(AuthContext);
+  const { loading,error , dispatch } = useContext(AuthContext);
 
   const navigate = useNavigate()
 
@@ -51,7 +51,7 @@ const Login = () => {
         <button disabled={loading} onClick={handleClick} className="lButton">
           Login
         </button>
-      
+        {error && <span className="login-error">{error.message}</span>}
       </div>
     </div>
     </div>
