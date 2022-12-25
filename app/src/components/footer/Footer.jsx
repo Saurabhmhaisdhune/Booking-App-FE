@@ -1,6 +1,7 @@
 import "./footer.css";
 
 const Footer = () => {
+
   return (
     <div className="footer">
       <div className="fLists">
@@ -19,6 +20,19 @@ const Footer = () => {
           <li className="fListItem">Villas</li>
           <li className="fListItem">Hostels</li>
           <li className="fListItem">Guest houses</li>
+          <li className="fListItem">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://inspiring-faloodeh-73b9c1.netlify.app"
+              className="adminroute"
+            >
+              Admin dashboard
+              <span className="tip">
+                Only admin can Login
+              </span>
+            </a>
+          </li>
         </ul>
         <ul className="fList">
           <li className="fListItem">Unique places to stay </li>

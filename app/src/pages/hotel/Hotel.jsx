@@ -24,8 +24,7 @@ const Hotel = () => {
   const [slideNumber, setSlideNumber] = useState(0);
   const [open, setOpen] = useState(false);
   const [openModal, setOpenModal] = useState(false);
-
-  const { data, loading } = useFetch(`/hotels/find/${id}`);
+  const { data, loading } = useFetch(`https://booking-app-p324.onrender.com/api/hotels/find/${id}`);
   const { user } = useContext(AuthContext);
   const navigate=useNavigate();
 
@@ -69,7 +68,7 @@ const Hotel = () => {
     <div>
       <Navbar />
       <Header type="list" />
-      {loading ? 'LOADING':(<div className="hotelContainer">
+      {loading ? ' Loading...':(<div className="hotelContainer">
         {open && (
           <div className="slider">
             <FontAwesomeIcon
@@ -103,7 +102,7 @@ const Hotel = () => {
             Excellent location – {data.distance} from center
           </span>
           <span className="hotelPriceHighlight">
-            Book a stay over ${data.cheapestPrice} at this property and get a free airport taxi
+            Book a stay over ₹{data.cheapestPrice} at this property and get a free airport taxi
           </span>
           <div className="hotelImages">
             {data.photos?.map((photo, i) => (
@@ -129,7 +128,7 @@ const Hotel = () => {
                 excellent location score of 9.8!
               </span>
               <h2>
-                <b>${days*data.cheapestPrice*options.room}</b> ({days} nights)
+                <b>₹{days*data.cheapestPrice*options.room}</b> ({days} nights)
               </h2>
               <button onClick={handleClick}>Reserve or Book Now!</button>
             </div>
