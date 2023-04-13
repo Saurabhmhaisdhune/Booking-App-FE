@@ -1,6 +1,5 @@
 import "./list.css";
 import Navbar from "../../components/navbar/Navbar";
-import Header from "../../components/header/Header";
 import { useLocation } from "react-router-dom";
 import { useState } from "react";
 import { format } from "date-fns";
@@ -17,7 +16,7 @@ const List = () => {
   const [min, setMin] = useState(undefined);
   const [max, setMax] = useState(undefined);
 
-  const { data, loading, error, reFetch } = useFetch(
+  const { data, loading, reFetch } = useFetch(
     `https://booking-app-p324.onrender.com/api/hotels?city=${destination}&min=${min || 0 }&max=${max || 99999}`
   );
 
@@ -28,7 +27,6 @@ const List = () => {
   return (
     <div>
       <Navbar />
-      <Header type="list" />
       <div className="listContainer">
         <div className="listWrapper">
           <div className="listSearch">

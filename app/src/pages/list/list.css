@@ -1,7 +1,8 @@
 .listContainer {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  padding-top: 20px;
+  background-color: #fff5ee;
 }
 
 .listWrapper {
@@ -13,7 +14,7 @@
 
 .listSearch {
   flex: 1;
-  background-color: #febb02;
+  background-color: #8fc1e3;
   padding: 10px;
   border-radius: 10px;
   position: sticky;
@@ -70,9 +71,9 @@
 
 .listSearch>button{
   padding: 10px;
-  background-color: #0071c2;
+  background-color: #315671;
+  border: 1px solid white;
   color: white;
-  border: none;
   width: 100%;
   font-weight: 500;
   cursor: pointer;

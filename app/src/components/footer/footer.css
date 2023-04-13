@@ -1,27 +1,26 @@
-.footer{
+.footer {
   width: 100%;
-  width: 1024px;
+  padding-top: 50px;
   font-size: 12px;
+  background-color: #557a95;
 }
-
-.fLists{
+.fLists {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 80px;
   margin-bottom: 50px;
 }
-
-.fList{
+.fList {
   list-style: none;
   padding: 0;
 }
-
-.fListItem{
+.fListItem {
   margin-bottom: 10px;
-  color: #003580;
+  color: #ffffff;
   cursor: pointer;
 }
-.tip{
+.tip {
   visibility: hidden;
   width: 100px;
   background-color: rgba(0, 0, 0, 0.711);
@@ -36,7 +35,12 @@
   top: 45px;
   right: 100px;
 }
-.adminroute:hover .tip{
+.adminroute:hover .tip {
   visibility: visible;
-    transition-delay: 100ms;
+  transition-delay: 100ms;
+}
+.adminroute {
+  text-decoration: none;
+  color: white;
+  padding: 5px 0px 10px 0px;
 }

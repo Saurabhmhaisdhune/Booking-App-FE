@@ -1,24 +1,26 @@
-.navbar{
+.navbar {
   height: 50px;
-  background-color: #003580;
+  background-color: #557a95;
   display: flex;
   justify-content: center;
+  padding-top: 7px;
+  padding-bottom: 7px;
 }
 
-.navContainer{
+.navContainer {
   width: 100%;
   max-width: 1024px;
-  color: white;
+  color: rgb(0, 0, 0);
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 
-.logo{
+.logo {
   font-weight: 500;
 }
 
-.navButton{
+.navButton {
   margin-left: 20px;
   border: none;
   padding: 5px 10px;
@@ -26,18 +28,19 @@
   color: #003580;
 }
 
-.logo{
+.logo {
   width: 30px;
   height: auto;
-  color: white;
+  color: rgb(0, 0, 0);
   padding-top: 5px;
 }
 
-.logoname{
+.logoname {
   font-size: larger;
-  font-weight: 500;
+  font-weight: 300;
+  letter-spacing: 8px;
   text-transform: capitalize;
-  border: 2px dotted white;
   padding-left: 5px;
   padding-right: 5px;
+  color: rgb(255, 255, 255);
 }

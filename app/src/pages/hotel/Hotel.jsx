@@ -1,14 +1,9 @@
 import "./hotel.css";
 import Navbar from "../../components/navbar/Navbar";
-import Header from "../../components/header/Header";
-import MailList from "../../components/mailList/MailList";
 import Footer from "../../components/footer/Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faCircleArrowLeft,
-  faCircleArrowRight,
-  faCircleXmark,
-  faLocationDot,
+  faLocationDot
 } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -44,18 +39,6 @@ const Hotel = () => {
     setOpen(true);
   };
 
-  const handleMove = (direction) => {
-    let newSlideNumber;
-
-    if (direction === "l") {
-      newSlideNumber = slideNumber === 0 ? 5 : slideNumber - 1;
-    } else {
-      newSlideNumber = slideNumber === 5 ? 0 : slideNumber + 1;
-    }
-
-    setSlideNumber(newSlideNumber)
-  };
-
   const handleClick=()=>{
     if(user){
       setOpenModal(true);
@@ -67,32 +50,8 @@ const Hotel = () => {
   return (
     <div>
       <Navbar />
-      <Header type="list" />
       {loading ? ' Loading...':(<div className="hotelContainer">
-        {open && (
-          <div className="slider">
-            <FontAwesomeIcon
-              icon={faCircleXmark}
-              className="close"
-              onClick={() => setOpen(false)}
-            />
-            <FontAwesomeIcon
-              icon={faCircleArrowLeft}
-              className="arrow"
-              onClick={() => handleMove("l")}
-            />
-            <div className="sliderWrapper">
-              <img src={data.photos[slideNumber]} alt="" className="sliderImg" />
-            </div>
-            <FontAwesomeIcon
-              icon={faCircleArrowRight}
-              className="arrow"
-              onClick={() => handleMove("r")}
-            />
-          </div>
-        )}
         <div className="hotelWrapper">
-          <button className="bookNow">Reserve or Book Now!</button>
           <h1 className="hotelTitle">{data.name}</h1>
           <div className="hotelAddress">
             <FontAwesomeIcon icon={faLocationDot} />
@@ -134,8 +93,7 @@ const Hotel = () => {
             </div>
           </div>
         </div>
-        <MailList />
-        <Footer />
+        <Footer/>
         </div>)}
         {openModal && <Reserve setOpen={setOpenModal} hotelId={id}/>}
     </div>

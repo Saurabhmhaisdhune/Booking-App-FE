@@ -1,3 +1,4 @@
+import Footer from "../footer/Footer"
 import "./mailList.css"
 
 const MailList = () => {
@@ -9,6 +10,7 @@ const MailList = () => {
         <input type="text" placeholder="Your Email" />
         <button>Subscribe</button>
       </div>
+      <Footer/>
     </div>
   )
 }

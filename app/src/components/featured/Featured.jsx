@@ -1,49 +1,56 @@
 import useFetch from "../../hooks/useFetch";
 import "./featured.css";
+import delhi from "../images/d1.jpg";
+import mumbai from "../images/m1.jpg";
+import bang from "../images/b1.jpg";
+import { useState } from "react";
 
 const Featured = () => {
-  const { data, loading} = useFetch(
+  const { data, loading } = useFetch(
     "https://booking-app-p324.onrender.com/api/hotels/countByCity?cities=delhi,bangalore,mumbai"
   );
+
+  const [show, setShow] = useState(false);
+
+  const handleshow = () => {
+    setShow(true);
+  };
+  setTimeout(() => {
+    setShow(false);
+  }, 5000);
 
   return (
     <div className="featured">
       {loading ? (
-        "Loading please wait..."
+        "Loading..."
       ) : (
         <>
-          <div className="featuredItem">
-            <img
-              src="https://pix10.agoda.net/hotelImages/194/194488/194488_14060515590019718447.jpg?ca=2&ce=1&s=1024x768"
-              alt=""
-              className="featuredImg"
-            />
+          {show ? (
+            <h1 className="tooltip">
+              Please enter the required city name in search bar and hit search
+              button
+            </h1>
+          ) : null}
+          <div className="featuredItem" onClick={handleshow}>
+            <img src={delhi} alt="delhi" className="featuredImg" />
             <div className="featuredTitles">
               <h1>Delhi</h1>
-              <h2>{data[0]} properties</h2>
+              <h2>{data[0]} Properties</h2>
             </div>
           </div>
 
-          <div className="featuredItem">
-            <img
-              src="https://r1imghtlak.mmtcdn.com/2b642172687d11eb91f90242ac110003.jpg?&output-quality=75&downsize=583:388&crop=583:388;0,24&output-format=jpg"
-              alt=""
-              className="featuredImg"
-            />
+          <div className="featuredItem" onClick={handleshow}>
+            <img src={bang} alt="bangalore" className="featuredImg" />
             <div className="featuredTitles">
               <h1>Bangalore</h1>
-              <h2>{data[1]} properties</h2>
+              <h2>{data[1]} Properties</h2>
             </div>
           </div>
-          <div className="featuredItem">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Mumbai_Aug_2018_%2843397784544%29.jpg/1200px-Mumbai_Aug_2018_%2843397784544%29.jpg"
-              alt=""
-              className="featuredImg"
-            />
+          <div className="featuredItem" onClick={handleshow}>
+            <img src={mumbai} alt="mumbai" className="featuredImg" />
             <div className="featuredTitles">
               <h1>Mumbai</h1>
-              <h2>{data[2]} properties</h2>
+              <h2>{data[2]} Properties</h2>
             </div>
           </div>
         </>
