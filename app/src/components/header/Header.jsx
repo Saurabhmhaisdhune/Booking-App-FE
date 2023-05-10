@@ -64,7 +64,7 @@ const Header = ({ type }) => {
               Planing a Vacation or a Business Trip?
             </h1>
             <p className="headerDesc">
-              Do not worry you are at the place to book a hotel - Just enter the
+              Do not worry you are at the right place to book a hotel - Just enter the
               city name on the search bar.
             </p>
             {!user && <button className="headerBtn">Sign in / Register</button>}
