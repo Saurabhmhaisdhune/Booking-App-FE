@@ -1,7 +1,7 @@
 .Register {
   height: auto;
-  width: 350px;
-  background-color: #94d2ff40;
+  width: auto;
+  background-color: #94d2ff60;
   border-radius: 10px;
 }
 
@@ -13,8 +13,8 @@
 }
 
 .lInput {
-  height: 30px;
-  width: 300px;
+  height: 35px;
+  width: 350px;
   padding: 8px;
   border-radius: 10px;
   border: 0.5px solid grey;
@@ -37,7 +37,7 @@
 .head-line {
   display: flex;
   justify-content: center;
-  font-size: large;
+  font-size: 25px;
 }
 .background {
   background-image: url("https://images.pexels.com/photos/4913514/pexels-photo-4913514.jpeg?auto=compress&cs=tinysrgb&w=1600");
@@ -46,7 +46,5 @@
   background-size: cover;
   display: flex;
   justify-content: center;
-  margin: 50px;
-  padding: 50px;
-  border-radius: 20px;
+  align-items: center;
 }

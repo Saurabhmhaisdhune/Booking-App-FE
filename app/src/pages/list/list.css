@@ -2,7 +2,8 @@
   display: flex;
   justify-content: center;
   padding-top: 20px;
-  background-color: #fff5ee;
+  background-color: #f0f0f0;
+  height: 100vh;
 }
 
 .listWrapper {

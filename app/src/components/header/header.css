@@ -36,6 +36,10 @@
 
 .headerDesc {
   margin: 20px 0px;
+  text-align: center;
+}
+.headerTitle {
+  text-align: center;
 }
 
 .headerBtn {
@@ -46,6 +50,8 @@
   border-radius: 5px;
   padding: 10px;
   cursor: pointer;
+  position: relative;
+  left: 44%;
 }
 
 .headerSearch {
@@ -78,7 +84,7 @@
 }
 
 .headerSearchText {
-  color:  rgb(134, 134, 134);
+  color: rgb(134, 134, 134);
   cursor: pointer;
 }
 

@@ -18,9 +18,10 @@
   
   .rClose {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 5px;
+    right: 5px;
     cursor: pointer;
+    font-size: 20px;
   }
   
   .rItem {
@@ -69,7 +70,7 @@
   .rButton {
     border: none;
     padding: 10px 20px;
-    background-color: #0071c2;
+    background-color: #315671;
     color: white;
     font-weight: bold;
     cursor: pointer;
